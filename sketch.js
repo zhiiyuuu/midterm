@@ -73,6 +73,36 @@ function setup() {
 			iframe.src = 'https://hackmd.io/@zhiiyu/HyzEGrCjee';
 		}
 	});
+
+	// 測驗卷筆記點擊事件
+	document.getElementById('examNotes').addEventListener('click', function(e) {
+		e.preventDefault();
+		const iframeContainer = document.getElementById('iframeContainer');
+		const iframe = iframeContainer.querySelector('iframe');
+		
+		if (iframeContainer.classList.contains('active') && iframe.src.includes('ryWe3U01Ze')) {
+			iframeContainer.classList.remove('active');
+			iframe.src = 'about:blank';
+		} else {
+			iframeContainer.classList.add('active');
+			iframe.src = 'https://hackmd.io/@zhiiyu/ryWe3U01Ze';
+		}
+	});
+
+	// 作品筆記點擊事件
+	document.getElementById('workNotes').addEventListener('click', function(e) {
+		e.preventDefault();
+		const iframeContainer = document.getElementById('iframeContainer');
+		const iframe = iframeContainer.querySelector('iframe');
+		
+		if (iframeContainer.classList.contains('active') && iframe.src.includes('HJtybvCkbg')) {
+			iframeContainer.classList.remove('active');
+			iframe.src = 'about:blank';
+		} else {
+			iframeContainer.classList.add('active');
+			iframe.src = 'https://hackmd.io/@zhiiyu/HJtybvCkbg';
+		}
+	});
 }
 
 function draw() {
